@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.game-container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    padding: 2rem;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.header h1 {
+    color: #2d3436;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+.problem {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #2d3436;
+    margin: 2rem 0;
+    min-height: 60px;
+}
+
+.input-section {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+#answer {
+    flex: 1;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border: 2px solid #dfe6e9;
+    border-radius: 10px;
+    outline: none;
+    text-align: center;
+}
+
+#answer:focus {
+    border-color: #74b9ff;
+}
+
+button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.1s, background 0.3s;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.primary-btn {
+    background: #0984e3;
+    color: white;
+}
+
+.primary-btn:hover {
+    background: #0870c0;
+}
+
+.history {
+    margin-top: 2rem;
+    max-height: 200px;
+    overflow-y: auto;
+    border-top: 2px solid #f0f0f0;
+    padding-top: 1rem;
+}
+
+.history-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.correct {
+    background: #55efc420;
+    color: #00b894;
+}
+
+.wrong {
+    background: #ff767520;
+    color: #d63031;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.difficulty {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+    justify-content: center;
+}
+
+.difficulty button {
+    padding: 0.5rem 1rem;
+    background: #f0f0f0;
+}
+
+.difficulty button.selected {
+    background: #0984e3;
+    color: white;
+}
+
+@media (max-width: 480px) {
+    .game-container {
+        padding: 1rem;
+    }
+
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
+    .problem {
+        font-size: 2rem;
+    }
+
+    .input-section {
+        flex-direction: column;
+    }
+}

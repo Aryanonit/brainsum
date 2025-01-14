@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Sprint</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>Math Sprint</h1>
+            <div class="stats">
+                <div>Score: <span id="score">0</span></div>
+                <div>Time: <span id="timer">60</span>s</div>
+            </div>
+        </div>
+
+        <div id="game-area">
+            <div class="problem" id="problem">Ready to start?</div>
+            <div class="input-section">
+                <input type="number" id="answer" placeholder="Enter answer" autocomplete="off">
+                <button class="primary-btn" id="submit-btn">Submit</button>
+            </div>
+            <div class="history" id="history"></div>
+        </div>
+    </div>
+
+    <div class="modal" id="start-modal">
+        <div class="modal-content">
+            <h2>Select Difficulty</h2>
+            <div class="difficulty">
+                <button class="difficulty-btn selected" data-difficulty="easy">Easy</button>
+                <button class="difficulty-btn" data-difficulty="medium">Medium</button>
+                <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+            </div>
+            <button class="primary-btn" id="start-btn">Start Game</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
